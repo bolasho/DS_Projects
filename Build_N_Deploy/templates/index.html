@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> Data Collector App</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>Subscriber Predictor</h1>
+        <h3>Please fill in your Age and Income to check if you are likely to subscribe to our services.</h3>
+        <!--div class="email"> {{text | safe}} </div-->
+        <form action="{{url_for('success')}}" method="POST">
+          <input title="please enter your age" placeholder="Enter your age" type="number" type="number" min="18", max="105" name="age" required> <br>
+          <input title="Your data will be safe with us" placeholder="Enter your income" type="number" min="10000",max="1000000000000"  name="income" required> <br>
+          <button type="submit"> Submit </button>
+        </form>
+      </div>
+    </body>
+</html>
